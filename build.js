@@ -7,7 +7,7 @@ const isWatching = args.indexOf('-w') !== -1;
 const webpackConfig = getWebpackConfig();
 
 if (isWatching) {
-  webpack(webpackConfig, () => {});
-} else {
   webpack(webpackConfig).watch({}, () => {});
+} else {
+  webpack(webpackConfig, () => {});
 }
