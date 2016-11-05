@@ -9,7 +9,7 @@ const port = 8080;
 const webpackConfig = getWebpackConfig({
   isWebpackDevServer: true,
   isProd,
-  port,
+  port
 });
 
 const server = new WebpackDevServer(webpack(webpackConfig), {

@@ -6,10 +6,7 @@
   "ecmaFeatures": {
     "modules": true
   },
-  "globals": {
-    "__DEV__": false,
-    "__PROD__": false
-  },
+  "extends": "../webpack-eslint.js",
   "rules": {
     "strict": [2, "never"],
     "no-console": 1,
