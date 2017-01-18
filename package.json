@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "webpack-boilerplate",
   "scripts": {
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "eslint --fix --ext .js,.jsx .",
     "test": "npm run lint",
-    "build": "node ./build.js",
+    "build": "node ./bin/build.js",
     "build:watch": "npm run build -- -w",
     "build:prod": "npm run build -- -p",
     "build:prod:watch": "npm run build:prod -- -w",
     "build:watch:prod": "npm run build:prod:watch",
-    "start": "node ./start.js"
+    "start": "node ./bin/start.js"
   },
   "author": "unimonkiez",
   "repository": {
@@ -35,31 +35,29 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-2": "^6.17.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.26.1",
     "eslint": "^3.3.1",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-import": "^1.16.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-import-resolver-webpack": "^0.8.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.4.1",
     "exports-loader": "^0.6.3",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
     "file-loader": "^0.9.0",
     "fontgen-loader": "^0.2.1",
     "html-webpack-plugin": "^2.22.0",
-    "imports-loader": "^0.6.5",
-    "json-loader": "^0.5.4",
+    "imports-loader": "^0.7.0",
     "material-ui": "^0.16.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-tap-event-plugin": "^1.0.0",
-    "replace-loader": "^0.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1",
     "style-loader": "^0.13.1",
+    "to-string-loader": "^1.1.5",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2",
-    "whatwg-fetch": "^1.0.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "whatwg-fetch": "^2.0.1"
   },
-  "dependencies": {
-    "eslint-import-resolver-webpack": "^0.7.0"
-  }
+  "dependencies": {}
 }
