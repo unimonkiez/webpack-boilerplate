@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "webpack-boilerplate",
   "scripts": {
     "lint": "eslint --fix --ext .js,.jsx .",
