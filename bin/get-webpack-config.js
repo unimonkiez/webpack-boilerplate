@@ -61,7 +61,8 @@ module.exports = ({ isProd = false, isWebpackDevServer = false, port } = {}) => 
           {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'stage-2']
+              presets: ['es2015', 'stage-2'],
+              plugins: ['transform-decorators-legacy']
             }
           }
         ]
@@ -73,7 +74,8 @@ module.exports = ({ isProd = false, isWebpackDevServer = false, port } = {}) => 
           {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'stage-2', 'react'].concat(isWebpackDevServer ? ['react-hmre'] : [])
+              presets: ['es2015', 'stage-2', 'react'].concat(isWebpackDevServer ? ['react-hmre'] : []),
+              plugins: ['transform-decorators-legacy']
             }
           }
         ]
