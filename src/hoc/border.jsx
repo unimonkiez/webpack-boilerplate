@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default color => WrappedComponent => class Border extends Component {
   render() {
     return (
@@ -9,3 +10,6 @@ export default color => WrappedComponent => class Border extends Component {
     );
   }
 };
+
+// Later in demo
+// import hoistStatics from 'hoist-non-react-statics';

@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from 'src/component/header.jsx';
 
 export default class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <Header />
-          Your app
-        </div>
-      </MuiThemeProvider>
+      <div>
+        <Header />
+        Your app
+      </div>
     );
   }
 }
