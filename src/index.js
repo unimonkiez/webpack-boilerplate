@@ -9,5 +9,12 @@ injectTapEventPlugin(); // Needed for onTouchTap
 
 window.onload = () => {
   const div = document.getElementById('app');
-  ReactDOM.render(React.createElement(App), div);
+  ReactDOM.render(React.createElement(App, {
+    color: '#ccccff'
+  }), div);
+
+  // const div2 = document.getElementById('app2');
+  // ReactDOM.render(React.createElement(App, {
+  //   color: 'blue'
+  // }), div2);
 };
