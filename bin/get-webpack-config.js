@@ -79,15 +79,16 @@ module.exports = ({ isProd = false, isWebpackDevServer = false, port } = {}) => 
         ]
       }, {
         test: /\.css$/,
-        use: [
-          ExtractTextPlugin.extract({
-            loader: 'to-string-loader',
-            fallbackLoader: 'style-loader'
-          }),
-          {
-            loader: 'css-loader'
-          }
-        ]
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'to-string-loader'
+            }, {
+              loader: 'css-loader'
+            }
+          ],
+          fallback: 'style-loader'
+        })
       }, {
         test: /\.woff(2)?$/,
         use: [
