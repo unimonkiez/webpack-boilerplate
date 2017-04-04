@@ -1,19 +1,30 @@
 import React, { Component, PropTypes } from 'react';
-import RedBorderHoc from 'src/hoc/red-border.jsx';
+import { Hoc as AppHoc } from 'src/container/provider.js';
+// import RedBorderHoc from 'src/hoc/red-border.jsx';
 
-@RedBorderHoc
-export default class Header extends Component {
-  static contextTypes = {
-    appColor: PropTypes.string.isRequired
+@AppHoc(ctx => ({
+  textColor: ctx.color
+}))
+export default class Input extends Component {
+  static propTypes = {
+    textColor: PropTypes.string.isRequired
+  };
+  state = {
+    myText: 'abc'
   };
   render() {
-    const { appColor: color } = this.context;
+    const { textColor: color } = this.props;
+    const { myText } = this.state;
     return (
       <div>
         <input
           style={{ color }}
-          defaultValue="abc"
+          value={myText}
+          onChange={e => this.setState({ myText: e.target.value })}
         />
+        <button onClick={() => this.setState({ myText: '' })}>
+          Reset
+        </button>
       </div>
     );
   }

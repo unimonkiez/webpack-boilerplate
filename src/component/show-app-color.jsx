@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import ColorToRgb from 'src/hoc/color.to.rgb.jsx';
 
-@ColorToRgb({ redPropName: 'redStr' })
+@ColorToRgb({ redPropName: 'myRed' })
 export default class ShowAppColor extends Component {
   static propTypes = {
-    redStr: PropTypes.number.isRequired,
+    myRed: PropTypes.number.isRequired,
     green: PropTypes.number.isRequired,
     blue: PropTypes.number.isRequired
   };
   render() {
-    const { redStr: red, green, blue } = this.props;
+    const { myRed: red, green, blue } = this.props;
     return (
       <div>
         <div>
